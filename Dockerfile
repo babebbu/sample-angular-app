@@ -6,7 +6,7 @@ WORKDIR /app
 RUN npm cache clean --force
 COPY . .
 RUN npm install
-RUN npm run build -- --configuration=$BUILD_MODE
+RUN npm run build --configuration=$BUILD_MODE
 
 ### STAGE 2:RUN ###
 FROM nginx:latest
